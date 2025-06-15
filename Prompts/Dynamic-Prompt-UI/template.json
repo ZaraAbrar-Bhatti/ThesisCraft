@@ -1,0 +1,17 @@
+{
+    "name": null,
+    "input_variables": [
+        "length_input",
+        "paper_input",
+        "style_input"
+    ],
+    "optional_variables": [],
+    "output_parser": null,
+    "partial_variables": {},
+    "metadata": null,
+    "tags": null,
+    "template": "\nYou are an expert research assistant. Your task is to summarize and analyze a research paper titled: \"{paper_input}\".\n\nPlease provide a {length_input} summary according to the given {style_input} including the following:\n- A brief overview of the problem the paper addresses.\n- The methodology used in the study (mention models, datasets, and techniques).\n- Key findings or results.\n- Code or algorithmic explanations, if mentioned (summarize in plain language).\n- Limitations of the study.\n- Real-world applications or implications.\n- A concluding sentence summarizing the impact of paper.\n\nMake the output clear, structured, and readable for someone with a technical background but who hasn\u2019t read the paper.\n",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}

@@ -1,0 +1,136 @@
+/* Header background */
+header[data-testid="stHeader"] {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+/* Main App background and default text */
+.stApp {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Button styling */
+.stButton>button {
+    background-color: #1DB954;
+    color: #000000;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+}
+.stButton>button:hover {
+    background-color: #1ED760;
+    color: #000000;
+}
+.stButton>button:focus,
+.stButton>button:active {
+    color: #000000 !important;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Headings */
+.stMarkdown h1 {
+    color: #1DB954;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+.stMarkdown h2 {
+    color: #1DB954;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Number input */
+.stNumberInput>div>div>input {
+    background-color: #333333;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #1DB954;
+}
+
+/* Select box styling - removing square boxes */
+.stSelectbox > div {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Select box with custom arrow and without parrot green shade */
+.stSelectbox>div>div>div {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+    border-radius: 5px !important;
+    border: 1px solid #444444 !important;
+    padding-right: 10px !important;
+    background-image: none !important;
+}
+
+/* Target all possible states */
+.stSelectbox > div:focus,
+.stSelectbox > div:hover,
+.stSelectbox > div:active,
+.stSelectbox > div:focus-within,
+.stSelectbox > div[data-focused="true"],
+.stSelectbox > div[aria-expanded="true"] {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Target inner elements */
+.stSelectbox * {
+    outline-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Target the specific React component */
+div[data-baseweb="select"] {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+div[data-baseweb="select"]:focus,
+div[data-baseweb="select"]:focus-within {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Target the input within the select */
+div[data-baseweb="select"] input:focus {
+    box-shadow: none !important;
+    outline: none !important;
+    border: none !important;
+}
+
+/* HIDE DROPDOWN ARROW */
+.stSelectbox div[data-baseweb="select"] > div > div:last-child {
+    display: none !important;
+}
+
+/* Target the dropdown list */
+div[role="listbox"] {
+    background-color: #333333 !important;
+    border-color: #444444 !important;
+}
+
+/* Override any outline or focus styles but preserve actual select box border */
+*:focus {
+    outline: none !important;
+}
+
+/* Sidebar */
+.stSidebar {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+/* Status messages */
+.stSuccess {
+    color: #1DB954;
+}
+.stWarning {
+    color: #FF4B4B;
+}
