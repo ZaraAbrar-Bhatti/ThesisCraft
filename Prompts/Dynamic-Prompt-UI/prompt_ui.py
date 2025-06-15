@@ -1,15 +1,21 @@
 from langchain_core.prompts import load_prompt
 from dotenv import load_dotenv
 import streamlit as st
+import os
 from model import Google_Chat_Model
 from descriptions import papers, msg, length, styles
 
-# Use relative path - just the filename
-with open("styles.css") as f:
+# Get the directory of the current script for relative paths
+script_dir = os.path.dirname(os.path.abspath(__file__))
+css_path = os.path.join(script_dir, "styles.css")
+template_path = os.path.join(script_dir, "template.json")
+
+# Load CSS
+with open(css_path) as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 load_dotenv()
-template = load_prompt("template.json")
+template = load_prompt(template_path)
 LLM = Google_Chat_Model
 
 st.title("📚 ThesisCraft")
