@@ -3,7 +3,7 @@ import streamlit as st
 from model import Google_Chat_Model
 from descriptions import papers, msg, length, styles
 
-with open(r"C:\Users\admin\Desktop\Gen_AI\Langchain\Prompts\Dynamic-Prompt-UI\styles.css") as f:
+with open(r"C:\Users\admin\Desktop\ThesisCraft\Prompts\Dynamic-Prompt-UI\styles.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 template = load_prompt("template.json")
